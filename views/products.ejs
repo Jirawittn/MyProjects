@@ -66,10 +66,6 @@
                                 <td id="snumber">
                                     <%= product.safeNumber %>
                                 </td>
-                                <td id="date">
-                                    <% var date = product.updateAt %>
-                                    <%= date.forEach(function(date){ date.$date.forEach(function(date){date.$numberLong}) }) %>
-                                </td>
                                 </tr>
                             <% }) %>
                     </table>
