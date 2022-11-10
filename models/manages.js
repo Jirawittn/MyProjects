@@ -1,9 +1,13 @@
+if (process.env.NODE_ENV !== "production") {
+    require('dotenv').config();
+}
 const mongoose = require('mongoose')
 const mongo = require('mongodb')
-const dbUrl='mongodb://localhost:27017/myProject'
+const dbUrl='mongodb://localhost:27017/myProject' ||  process.env.DB_URL
+
 
 mongoose.connect(dbUrl, {
-    useNewUrlParser:true
+    useNewUrlParser:true,
 })
 
 const db = mongoose.connection

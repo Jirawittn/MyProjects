@@ -19,7 +19,7 @@
 
         <div id="main">
             <div class="content">
-                <h2>Search</h2>
+                <h2>การค้นหา</h2>
                 <div id="searchWrapper">
                     <!-- <input type="text" name="searchBar" id="searchBar" placeholder="search for a product" class="form-control"> -->
                     <!-- <form action="/products/search" method="POST">
@@ -28,15 +28,15 @@
                     </div>
                     <button type="submit" class="btn btn-secondary">ค้นหา</button>
                 </form> -->
-                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="กรุณาใส่ชื่อสินค้า" title="Type in a name">
                     <h2>รายการสินค้า</h2>
                     <table id="list">
                         <tr id="headerTitle">
                             <th id="name">ชื่อ</th>
                             <th id="price">ราคา (บาท)</th>
                             <th id="number">จำนวนที่เหลือ</th>
-                            <th id="dnumber">จำนวนที่อันตราย</th>
-                            <th id="snumber">จำนวนที่ปลอดภัย</th>
+                            <th id="dnumber">จำนวนที่ใกล้หมด</th>
+                            <th id="snumber">จำนวนที่มีอยู่มาก</th>
 
                         </tr>
                         <% Object.values(manages).forEach(function(product){ %>
