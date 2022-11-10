@@ -60,6 +60,11 @@ app.use(function(err, req, res, next) {
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
 
+  let port = process.env.PORT;
+if (port == null || port ==""){
+  port = 4000;
+}
+
   // render the error page
   res.status(err.status || 500);
   res.render('error');
