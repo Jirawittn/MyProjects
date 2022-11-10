@@ -13,6 +13,14 @@ var contactRouter = require('./routes/contact');
 var app = express();
 var session = require('express-session');
 
+// const MongoStore = require('connect-mongo')(session);
+const MongoStore = require('connect-mongo');
+
+
+// app.use(session({
+//   store: MongoStore.create({ mongoUrl: 'mongodb://localhost/test-app' })
+// }));
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
